@@ -7,51 +7,79 @@
 		<title>Cydran - An unobtrusive Javascript presentation framework</title>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
 		<script src="https://kit.fontawesome.com/ce851e1004.js" crossorigin="anonymous"></script>
-		<style>
-			ul {
-				font-size: 16px;
-			}
-
-			li {
-				margin: 10px;
-			}
-		</style>
 	</head>
 
 	<body>
+
+		<nav class="navbar" role="navigation" aria-label="main navigation">
+			<div class="navbar-brand">
+				<a class="navbar-item" href="https://cydran.io">Cydran</a>
+
+				<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+				</a>
+			</div>
+
+			<div id="navbarBasicExample" class="navbar-menu">
+				<div class="navbar-start">
+					<a class="navbar-item" href="/">
+
+						<span class="icon-text">
+							<span class="icon">
+								<i class="fa-solid fa-home"></i>
+							</span>
+						</span>
+					</a>
+
+				</div>
+
+				<div class="navbar-end">
+					<div class="navbar-item">
+						<div class="buttons">
+							<a class="button" href="https://github.com/cydran/cydran" target="_blank">
+								<span class="icon-text">
+									<span class="icon">
+										<i class="fa-brands fa-github"></i>
+									</span>
+									<span>GitHub</span>
+								</span>
+							</a>
+							<a class="button" href="https://www.npmjs.com/package/cydran" target="_blank">
+								<span class="icon-text">
+									<span class="icon">
+										<i class="fa-brands fa-npm"></i>
+									</span>
+									<span>NPM</span>
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+
 		<section class="section">
 			<div class="container">
 				<h1 class="title is-1">Cydran</h1>
 				<p class="subtitle">
 					An unobtrusive Javascript presentation framework
 				</p>
-				<p>
-					Please see the the following links for more information until we get something more interesting here:
-				</p>
-				<ul>
-					<li>
-						<a href="https://github.com/cydran/cydran" target="_blank">
-							<span class="icon-text">
-								<span class="icon">
-									<i class="fa-brands fa-github"></i>
-								</span>
-								<span>GitHub</span>
-							</span>
-						</a>
-					</li>
-					<li>
-						<a href="https://www.npmjs.com/package/cydran" target="_blank">
-							<span class="icon-text">
-								<span class="icon">
-									<i class="fa-brands fa-npm"></i>
-								</span>
-								<span>NPM</span>
-							</span>
-						</a>
-					</li>
-				</ul>
 			</div>
 		</section>
+
+		<footer class="footer">
+			<div class="content has-text-centered">
+				<p>
+					<strong>Cydran</strong> by <a href="https://cydran.io" target="_blank">The Cydran Team</a>.
+					The source code is licensed
+					<a href="http://opensource.org/licenses/mit-license.php" target="_blank">MIT</a>.
+				</p>
+			</div>
+		</footer>
+
 	</body>
 
 </html>
