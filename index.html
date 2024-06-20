@@ -6,10 +6,17 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Cydran - An unobtrusive Javascript presentation framework</title>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
-		<script src="https://kit.fontawesome.com/ce851e1004.js" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css">
+		<style>
+			pre {
+				background-color: #000000 !important;
+			}
+
+			code > .token.operator {
+				background-color: #000000 !important;
+			}
+		</style>
 	</head>
 
 	<body>
@@ -88,7 +95,9 @@
 
 						<h2 class="title is-4">Hello World in Cydran</h2>
 
-						<pre><code class="language-typescript">class HelloWorld extends Component {
+						<pre><code class="language-typescript">import { builder, Component, Stage } from "cydran";
+
+class HelloWorld extends Component {
 
 	private name: string;
 								
@@ -97,7 +106,15 @@
 		this.name = "World";
 	}
 								
-}</code></pre>
+}
+
+const stage: Stage = builder("body")
+	.withInitializer((stage: Stage) => {
+		stage.setComponent(new HelloWorld());
+	})
+	.build();
+
+stage.start();</code></pre>
 
 					</div>
 					<div class="column">
@@ -189,7 +206,9 @@
 				</p>
 			</div>
 		</footer>
-
+		<script src="https://kit.fontawesome.com/ce851e1004.js" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
 	</body>
 
 </html>
